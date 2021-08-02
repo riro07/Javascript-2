@@ -516,3 +516,5 @@ console.dir(document)
 
 
 document.body.addEventListener("dblclick", ()=>console.log("Hola addeventlistener!!"));
+
+console.log("ejemplo");
