@@ -1,20 +1,17 @@
 
-//--------------------------------------------------------------------------------------- POO
-
-// PROTOTIPOS
-
+////////////////////////////----------------- POO -----------------//////////////////////////////
 /*
+////////////////////////////////////////// PROTOTIPOS //////////////////////////////////////////
 
-Platon = Las cosas son la representacion fisica en el mundo tangible de lo que pensamos.
+// Platon = Las cosas son la representacion fisica en el mundo tangible de lo que pensamos.
 
-Clases - Modelo a seguir.
-Objetos - Es una instacia de una clase.
-Atributos - Es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
-Metodos - Son las acciones que un objeto puede realizar (son funciones dentro de un objeto)
+// Clases - Modelo a seguir.
+// Objetos - Es una instacia de una clase.
+// Atributos - Es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
+// Metodos - Son las acciones que un objeto puede realizar (son funciones dentro de un objeto)
 
-*/
 // Objeto literal
-/*
+
 const animal = {
     nombre: "Snoopy",
     sonar(){
@@ -30,12 +27,12 @@ const animal2 = {
 }
 console.log(animal);
 console.log(animal2);
-*/
+
 
 //Funcion constructora = tienen que colgar del objeto this para formar parte del constructor
 // Constructor animal. Conviene usar constructores, para no estar copipasteando codigo a 
 // cada rato, imaginate copipastear codigo por mil personajes.
-/*
+
 function Animal(nombre, genero){
     this.nombre = nombre;
     this.genero = genero;
@@ -48,9 +45,7 @@ function Animal(nombre, genero){
         console.log(`Hola me llamo ${this.nombre}`);
     }
 }
-*/
 
-/*
 //Funcion constructora donde asignamos los metodos al prototipo, no a la funcion como tal
 // Atributos
 function Animal(nombre, genero){
@@ -58,7 +53,7 @@ function Animal(nombre, genero){
     this.genero = genero;
 
 }
-// Métodos dentro del prototipo de la funcion constructora
+// Métodos dentro del prototipo de la funcion animal
 Animal.prototype.sonar = function(){
     console.log("Hago sonidos por que estoy vivo");
 };
@@ -67,7 +62,7 @@ Animal.prototype.saludar = function(){
     console.log(`Hola me llamo ${this.nombre}`);
 };
 
-// Herencia prototipica
+///////////////////////////////////// Herencia prototipica /////////////////////////////////////
 
 function Perro (nombre, genero, tamanio){
     this.super = Animal;
@@ -99,9 +94,19 @@ SNOOPY.ladrar();
 console.log(LolaBunny);
 LolaBunny.sonar();
 LolaBunny.saludar();
-*/
+
+function Perrito (nombre, genero, tamanio, edad){
+    this.super = Perro;
+    this.super(nombre, genero, tamanio);
+    this.edad = edad;
+}
+
+const perritoc = new Perrito("perrito","perrito","perrito","perrito");
+
+console.log(perritoc);
+
 //console.log("--------------------------------------------------------------------")
-/*
+
 //Ejemplo pedorro propio ejemplo ejercicio
 function Zapatilla(talle, tipocalidad){
     this.talle = talle;
@@ -230,9 +235,9 @@ JE.getX();
 const JA = new Child("HOLA", "MUNDO");
 console.log(JA);
 
-*/
 
-/*
+
+
 
     // EJEMPLO
 
@@ -248,8 +253,9 @@ function Animal(nombre, genero){
         console.log(`Hola me llamo ${this.nombre}`);
     }
 }
-*/
-/*
+
+///////////////////////////////////////// Clases y herencia ///////////////////////////////////////
+
 class Animal{
     // El constructor es un metodo especial que se ejecuta al momento de instanciar la clase
     constructor(nombre, genero){
@@ -318,7 +324,7 @@ TITAN.setRaza = "Ovejero Aleman";
 console.log(TITAN.getRaza);
 
 
-// Métodos estáticos, getters y setters
+////////////////////////////// Métodos estáticos, getters y setters //////////////////////////////
 
 
 console.log("---------------------------------------------------------------------")
@@ -383,7 +389,8 @@ console.log(GABRIEL.getNacionalidad);
 GABRIEL.setNacionalidad = "Argentino";
 console.log(GABRIEL.getNacionalidad);
 GABRIEL.amar("comer");
-
+*/
+/*
 console.log("---------------------------------------------------------------------")
 
 class Calculadora{
@@ -457,7 +464,7 @@ if(isNaN){
 }
 
 console.log(isNaN("hola"));
-*/
+
 
 class Animales {
     constructor(tipoAnimal, genero){
@@ -518,3 +525,6 @@ console.dir(document)
 document.body.addEventListener("dblclick", ()=>console.log("Hola addeventlistener!!"));
 
 console.log("ejemplo");
+*/
+
+console.log(console);
