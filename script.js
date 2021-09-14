@@ -32,7 +32,7 @@ console.log(animal2);
 //Funcion constructora = tienen que colgar del objeto this para formar parte del constructor
 // Constructor animal. Conviene usar constructores, para no estar copipasteando codigo a 
 // cada rato, imaginate copipastear codigo por mil personajes.
-
+*/
 function Animal(nombre, genero){
     this.nombre = nombre;
     this.genero = genero;
@@ -101,10 +101,11 @@ function Perrito (nombre, genero, tamanio, edad){
     this.edad = edad;
 }
 
+Perrito.prototype = new Perro();
 const perritoc = new Perrito("perrito","perrito","perrito","perrito");
-
 console.log(perritoc);
 
+/*
 //console.log("--------------------------------------------------------------------")
 
 //Ejemplo pedorro propio ejemplo ejercicio
@@ -527,4 +528,3 @@ document.body.addEventListener("dblclick", ()=>console.log("Hola addeventlistene
 console.log("ejemplo");
 */
 
-console.log(console);
